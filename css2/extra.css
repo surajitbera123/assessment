@@ -1,0 +1,298 @@
+body{
+    background-image: url("food.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;  
+}
+.mydiv1{
+padding:10px;
+border:4px solid red;
+background-color: black;
+color:white;
+border-radius: 30px;
+width:28%;
+padding-right:6px;
+float:left;
+margin-bottom: 1%;
+
+}
+.mydiv2 {
+background-color: black;
+width:30%;
+padding:20px 20px;
+border: 4px solid red;
+border-radius: 30px;
+margin:0 auto;
+margin-left:380px;
+float:right;
+margin-bottom: 1%;   
+}
+.mydiv2 ul{
+
+}
+.mydiv2 ul li{
+list-style: none;
+text-decoration: none;
+color:white;
+float:left;
+margin: 10px;
+padding-bottom:10px;
+font-size: 16px;
+font-weight:bold;
+
+}.mydiv2 ul li:hover{
+text-decoration: underline;
+cursor: pointer;
+color:darkorange;
+}
+
+.mydiv3{
+background-color: black;
+border: 4px solid red;
+border-radius: 30px;
+width:50%;
+clear:both;
+margin-left: 23%;
+margin-bottom: 4%;
+
+}
+.mydiv3 ul li{
+list-style: none;
+color:aliceblue;
+font-size: 45px;
+font-family: calibri;
+
+
+}.form{
+width:35%;
+height:80%;
+background-color: bisque;
+}.mydiv{
+    background-color:white;
+    width:20%;
+    height:100%;
+    margin: 0 auto;
+    padding:50px;
+    border-style:dotted;
+    border-color: 9px solid green;
+    color:red;
+    font-weight: bold;
+    font-size: 20px;
+    float:left;
+    margin-left:15%;
+    
+    
+}#aaa{
+width:95%;
+}
+  #aaa:focus{
+   background-color:darkorange;
+}
+#btn{
+padding:10px;
+color:white;
+background-color: blue;
+border-radius: 10px;
+font-size:16px;
+}#btn:hover{
+color:red;
+}
+hr{
+width:100%;
+margin-bottom:10%;
+}
+.circle{
+background-color: aqua;
+color:black;
+width: 20%;
+border:5px solid red;
+border-radius: 100%;
+margin-left:20px;
+padding:35px;
+font-size: 20px;
+font-weight: bold;
+float:left;
+margin-top: 20%;
+
+
+}p{
+margin-left: 45px;
+
+}
+#menu{
+width:15%;
+background-color: black;
+color:aliceblue;
+border: 5px solid red;
+border-radius: 30px;
+padding:7px;
+margin:0 auto;
+margin-top:67%;
+float:right;
+margin-right: 10%;
+margin-bottom:10px;
+}
+#menu h1{
+margin-left:30%;
+
+}
+
+.abc{
+width:20%;
+background-color: aqua;
+padding:40px;
+border: 3px solid green;
+margin-top:3%;
+border-radius: 30px;
+float:left;
+margin-left: 30px;
+
+}.abc ul li{
+font-size: 30px;
+color:red;
+font-weight: bold;
+}
+.abc ul li:hover{
+font-size: 30px;
+color:black;
+font-weight: bold;
+text-decoration: underline;
+cursor:pointer;
+}
+.def{
+width:20%;
+background-color: aqua;
+padding:40px;
+border: 3px solid green;
+margin-top:3%;
+border-radius: 30px;
+float: left;
+margin-left:100px;
+
+
+}.def ul li{
+font-size: 30px;
+color:red;
+font-weight: bold;
+}
+.def ul li:hover{
+font-size: 30px;
+color:black;
+font-weight: bold;
+text-decoration: underline;
+cursor:pointer;
+}
+.ghi{
+width:20%;
+background-color: aqua;
+padding:40px;
+border: 3px solid green;
+margin-top:3%;
+border-radius: 30px;
+float: left;
+margin-left:100px; 
+float:left;
+
+
+}.ghi ul li{
+font-size: 30px;
+color:red;
+font-weight: bold;
+}
+.ghi ul li:hover{
+font-size: 32px;
+color:black;
+font-weight: bold;
+text-decoration: underline;
+cursor:pointer;
+}
+.jkl{
+width:20%;
+background-color: aqua;
+padding:40px;
+border: 3px solid green;
+margin-top:3%;
+border-radius: 30px;
+float:left;
+margin-left: 30px;
+
+}.jkl ul li{
+font-size: 30px;
+color:red;
+font-weight: bold;
+}
+.jkl ul li:hover{
+font-size: 32px;
+color:black;
+font-weight: bold;
+text-decoration: underline;
+cursor:pointer;
+}
+.mno{
+width:20%;
+background-color: aqua;
+padding:40px;
+border: 3px solid green;
+margin-top:3%;
+border-radius: 30px;
+float: left;
+margin-left:100px;
+
+
+}.mno ul li{
+font-size: 30px;
+color:red;
+font-weight: bold;
+}
+.mno ul li:hover{
+font-size: 32px;
+color:black;
+font-weight: bold;
+text-decoration: underline;
+cursor:pointer;
+}
+.pqr{
+width:20%;
+background-color: aqua;
+padding:35px;
+border: 3px solid green;
+margin-top:3%;
+border-radius: 30px;
+float: left;
+margin-left:100px; 
+float:left;
+margin-bottom: 10px;
+
+}.pqr ul li{
+font-size: 30px;
+color:red;
+font-weight: bold;
+}
+.pqr ul li:hover{
+font-size: 32px;
+color:black;
+font-weight: bold;
+text-decoration: underline;
+cursor:pointer;
+}
+.myhr{
+margin-bottom: 10px;
+height:2px;
+
+}
+ hr{
+    height: 5px;
+}
+span:hover{
+    font-size: 40px;
+    text-decoration: underline;
+    color:yellow;
+}
+.abc,.def,.ghi,.jkl,.mno,.pqr{
+    Color:blue;
+}
+#myid:hover{
+    color:black;
+    font-size: 20px;
+    text-decoration: none;
+}
