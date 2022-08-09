@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahara</title>
+    <style>
+       *{
+             box-sizing: border-box;
+             margin: 0;
+        }
+        .card1{
+           position: relative;
+           top:30px;
+        }
+        body{
+            background-image: url("emptyroad.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }.horse{
+            height:50px;
+            width:50px;
+            position: relative;
+            top:10px;
+            left:15px;
+            border-radius: 5px;
+        }.list{
+            position: relative;
+            float:right;
+            right:20px;
+
+        }.list ul{
+
+        }.list ul li{
+            list-style: none;
+            display: inline;
+            padding: 20px;
+            color:white;
+
+        }.list ul li:hover{
+           text-decoration: underline;
+           color:yellow;
+           font-size: 18px;
+           
+        }.sahara h1{
+            color:red;
+            font-size: 63px;
+            float: left;
+            position: relative;
+            top:200px;
+            left:80px;
+        }.sahara p{
+           color:white;
+           position: relative;
+           top:285px;
+           left:-190px;
+           font-size: 19px;
+        }.button button{
+            width:15%;
+            border-radius: 40px;
+            padding:20px;
+            border:0px solid white;
+            font-weight:bold;
+            font-size:18px;
+            position:relative;
+            top:290px;
+            left:70px;
+        }.button button:hover{
+            color:aliceblue;
+            background-color: black;
+        }
+
+        .flex-container1 img{
+              border-radius: 20px;
+
+        }.flex-container2 img{
+            border-radius: 20px;
+        }
+        .flex-container1{
+            display: flex;
+            flex-direction: row;
+            float:right;
+            flex-wrap: wrap;
+            position: relative;
+            top:-160px;
+            right:40px;
+           
+            
+        }.flex-container1>div{
+            margin-right: 20px;
+            
+        }
+        .flex-container2{
+            display: flex;
+            flex-direction: row;
+            float:right;
+            flex-wrap: wrap;
+            position: relative;
+            top:-80px;
+            right:-420px;
+        }.flex-container2>div{
+            margin-right: 20px;
+            
+        }.card2 img{
+            position: relative;
+            top:35px;
+        }
+        .flex-container1 img:hover{
+            padding-bottom: 15px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+         }
+         .flex-container2 img:hover{
+            padding-bottom: 15px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+         }@media(max-width:400px){
+            
+            .list{
+                position: relative;
+                float:right;
+                top:25px;
+                right:23px;
+            }.list ul li{
+                list-style: none;
+                display: block;
+                padding: 5px;
+                color:white;
+            }.sahara h1{
+                color:red;
+                font-size: 30px;
+                float: left;
+                position: relative;
+                top:20px;
+                left:20px;
+            }
+            .flex-container2{
+                display: flex;
+                flex-direction: row;
+                float:left;
+                flex-wrap: column;
+                position: relative;
+                top:90px;
+                right:10px;
+                left:30px;
+                bottom:0px;
+                box-sizing: border-box;
+                
+            }.flex-container2>div{
+                margin-bottom: 10px;
+          
+            }.flex-container1{
+                display: flex;
+                flex-direction: column;
+                float:left;
+                flex-wrap: wrap;
+                position: relative;
+                top:50px;
+                left:29px;
+                right:20px;
+                bottom:-90px;
+                box-sizing: border-box;
+                
+            }.flex-container1>div{
+                margin-bottom: 7px;
+                
+            }.sahara p{
+                color:blue;
+                position: relative;
+                top:50px;
+                left:5px;
+                font-size: 13px;
+                text-align: justify;
+            }.button button{
+                width:45%;
+                border-radius: 40px;
+                padding:10px;
+                font-weight:bold;
+                font-size:14px;
+                position:relative;
+                top:60px;
+                left:55px;
+                margin: 0 auto;
+                color:white;
+                background-color: black;
+         }
+        }
+         @media(min-width:401px) and (max-width:750px){
+
+            
+            .flex-container1{
+                display: flex;
+                flex-direction: row;
+                float:right;
+                flex-wrap: wrap;
+                position: relative;
+                top:50px;
+                margin-left: -90px;
+  
+            }
+            .flex-container1>div{
+                margin-bottom: 0px;
+         } .flex-container2{
+            display: flex;
+            flex-direction: row;
+            float:left;
+            flex-wrap: wrap;
+            position: relative;
+            top:85px;
+            right:40px;
+            left:20px;
+            bottom:-20px;
+            box-sizing: border-box;
+            
+        }.flex-container2>div{
+            margin-bottom: 10px;
+        } .sahara h1{
+            color:red;
+            font-size: 48px;
+            float: left;
+            position: relative;
+            top:80px;
+            left:0px;
+        }.sahara p{
+           color:royalblue;
+           position: relative;
+           top:70px;
+           left:0px;
+           font-size: 14px;
+           text-align: left;
+
+    }
+    .button button{
+        width:35%;
+        border-radius: 40px;
+        padding:10px;
+        color:white;
+        background-color: black;
+        font-weight:bold;
+        font-size:18px;
+        position:relative;
+        top:80px;
+        left:140px;
+}
+}
+</style>   
+</head>
+<body>
+    <img src="horse.jpeg" alt="" class="horse">
+    <div class="list">
+        <ul>
+            <li>HOME</li>
+            <li>REGION</li>
+            <li>ABOUT</li>
+            <li><img src="icon.jpeg" alt="" style="position:relative; top:13px;height:35px;width:35px; border-radius:30px;"></li>
+        </ul>
+    </div>
+    <div class="sahara">
+        <h1>SAHARA</h1> <br>
+        <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Fuga molestiae reiciendis placeat asperiores mollitia earum deserunt a. <br>Totam dolorem, eveniet doloremque amet quaerat mollitia quia, this hies foy rweoy jouynrt</P>
+    </div>
+    <div class="button">
+        <button>EXPLORE</button>
+    </div>
+    <div class="flex-container1">
+        <div class="card1"> 
+            <img src="morubhumi.png" alt="" height="250px" width="210px">
+        </div>
+        <div class="card2">
+            <img src="hill.png" alt="" height="250px" width="210px">
+        </div>
+    </div> <br> <br> <br> <br> <br> <br><br><br><br> <br><br><br> 
+    <div class="flex-container2">
+        <div class="card3">
+            <img src="pyramid.jpeg" alt="" height="250px" width="210px">
+        </div>
+        <div class="card4">
+            <img src="bluecity.png" alt="" height="250px" width="210px">
+        </div>
+    </div>
+
+</body>
+</html>
