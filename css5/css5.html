@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }.flex1{
+          display:flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: center;
+        }.flex1>div{
+            height:110px;
+            width:100px;
+            background-color: blue;
+            margin: 45px;
+            animation-name: raja;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }.flex2{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+          }.flex2>div{
+              height:120px;
+              width:100px;
+              background-color:blueviolet;
+              margin: 35px;
+              animation-name: bera;
+              animation-duration: 3s;
+              animation-delay: 1.5s;
+              animation-iteration-count: infinite;
+              position:relative;
+              top:-30px;
+          }.flex3{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+          }.flex3>div{
+              height:120px;
+              width:100px;
+              background-color:green;
+              margin: 35px;
+              animation-name: surajit;
+              animation-duration: 1s;
+              animation-delay: 0s;
+              animation-iteration-count: infinite;
+              position:relative;
+              top:-30px;
+          }
+          .flex4{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+          }.flex4>div{
+              height:120px;
+              width:100px;
+              background-color:red;
+              margin: 35px;
+              
+          }.height{
+            animation-name: ram;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            position:relative;
+            top:-10px;
+          }
+          .width{
+            animation-name: ravan;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            position:relative;
+            top:-10px;
+          }
+          .circle{
+            animation-name: sultan;
+            animation-duration: 3s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            position:relative;
+            top:-10px;
+          }
+        @keyframes raja{
+            0%{
+                transform:rotate(0deg);
+              }
+               100%{
+                transform:rotate(120deg);
+               }
+            }   
+        @keyframes bera{
+            0%{
+                transform:skew(10deg);
+              }
+               100%{
+                transform:skew(30deg);
+               }
+         }   
+         @keyframes surajit{
+            0%{
+                transform:rotate(0deg);
+              }
+               100%{
+                transform:rotate(360deg);
+               }
+         } 
+         @keyframes ram{
+            0%{
+                height:20px;
+              }
+               100%{
+                height:120px;
+               }
+          
+            } 
+            @keyframes ravan{
+                0%{
+                    width:20px;
+                  }
+                   100%{
+                    height:100px;
+                   }
+              
+                }    
+                @keyframes sultan{
+                    0%{
+                       transform: rotate(0deg);
+                      }
+                       100%{
+                        transform: rotate(180deg);
+                       }
+                  
+                    }    
+    </style>
+</head>
+<body bgcolor="yellow">
+    <h1 style="text-align:center;">Try to replicate this</h1>
+    <div class="flex1">
+      <br> 1. <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="flex2">
+        2. <div></div>
+         <div></div>
+         <div></div>
+     </div>
+     <div class="flex3">
+        3. <div></div>
+         <div></div>
+         <div></div>
+     </div>
+     <div class="flex4">
+        4. <div class="height" style="background-color:red"></div>
+         <div class="width" style="background-color:cyan"></div>
+         <div class="circle" style="background-color:firebrick" ></div>
+     </div>
+    <a href="secpage.html"> <h1 style="text-align:center;">Let's go and try another images</h1></a>
+</body>
+</html>
