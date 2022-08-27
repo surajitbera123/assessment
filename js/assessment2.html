@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myhead{
+            background-color: wheat;
+            color:red;
+            font-size: 40px;
+            text-align: center;
+        }pre{
+            color:blue;
+            font-size: 16px;
+            font-weight: bold;
+        }h1{
+            background-color: wheat;
+        }#myh1{
+            color:black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myhead">Decision Making</h1>
+    <ol>
+    <h1><li>Calculator</li></h1>
+    <pre>
+    const Calculator = (A, B, C) => 
+{
+  
+	
+  switch(A){
+      case '+':{
+      var sum=B+C;
+      return (sum);
+      break;
+     }
+      case '_':{
+      var sub=B-C;
+      return (sub);
+      break;
+    }
+      case '*':{
+      var mul=B*c;
+      return (mul);
+      break;
+    }
+      case '/':{
+      var div=B/c;
+      return (div);
+      break;
+    }
+    
+  }
+  
+    
+};
+
+</pre>
+<h1><li>
+    Check whether the conditions are fulfilled or not</li></h1>
+<pre>
+    onst Check_divisibility = (N) => {
+        if((N%6==0) && (N%9==0)){
+          return "Divisible by both";
+        }else{
+           return "Not Divisible by both";
+        }
+            
+        };        
+
+</pre>
+<h1><li>
+    Eligible Voter</li></h1>
+<pre>
+
+    const isEligible = (a) => {
+        if(a>=18)
+        return "Eligible for Voting";
+        else
+        return "Not Eligible for Voting";
+        
+    };
+    
+</pre>
+<h1><li>
+    Find Relation</li></h1>
+<pre>
+
+    const findRelation = (x,y) => {
+        if(x>y){
+        return (x+" is greater than "+y);
+        }
+        if(x<y){
+        <pre>return (x+" is smaller than "+y);
+        }
+        else{
+          return (x+" is equal to "+y);
+        }
+    };  </pre> 
+
+</pre>
+<h1 id="myh1"><li>
+    Find Grades</li></h1>
+<pre>
+    const findGrades = (a) => {
+
+        let grade;
+        if(a<=10)
+        return 'E';
+        else if(a>=11 && a<=20 )  
+        return 'D';
+        else if(a>=21 && a<=30 )  
+        return 'C';
+        else if(a>=31 && a<=40 )  
+        return 'B';
+        else if(a>=41 && a<=50) 
+        return 'A';
+        };
+                
+</pre>
+<h1 id="myh1"><li>
+ Get Value</li></h1>
+<pre>
+    const getValue = (a) => {
+  
+        if(a=='p' || a=='P'){
+          return "PrepBytes";
+        }
+         else if(a=='z' || a=='Z'){
+          return "Zenith";
+        }
+        else  if(a=='e' || a=='E'){
+          return "Expert Coder";
+        }
+       else {
+          return "Data Structure";
+        }
+       
+        
+    };    
+    
+</pre>
+<h1 id="myh1"><li>
+    Find the maximum number out of three</li></h1>
+   <pre>
+    if(A>B && A>C){
+        return A;
+        }
+        else if(B>A && B>C){
+        return B;
+        }
+        else if(A==B && A==C && B==C){
+          return -1;
+        }
+        else{
+        return C;
+        }
+        
+        };        
+       
+   </pre>
+   <h1 id="myh1"><li>
+    Second Smallest</li></h1>
+   <pre>
+    const findSndSmallest = (x,y,z) => {
+        if(x<=y && x<=z){
+          if(y<=z)
+            return y;
+            else
+            return z;
+        
+        }
+        else if(y<=z){
+          if(x<=z)
+          return x;
+          else 
+          return z;
+        }
+        
+        else{
+          if(x<=y)
+          return x;
+          else
+          return y;
+        }
+        
+        
+        
+    };
+        
+   </pre>
+   <h1 id="myh1"><li>
+    Check whether the triangle is Acute or Obtuse</li></h1>
+   <pre>
+    const Triangle_Check = (A,B,C) => {
+        let sum = A + B + C;
+              
+              if (sum == 180 && A > 0 && B > 0 && C > 0) {
+                  if (A < 90 && B < 90 && C < 90) {
+                      return "acute";
+                  }
+                  else if (A == 90 || B == 90 || C == 90) {
+                      return "Right-angled";
+                  }
+                  else {
+                      return "obtuse";
+                  }
+              }
+       };       
+   </pre>
+</ol>
+</body>
+</html>
