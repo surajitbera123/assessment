@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myhead{
+            background-color: wheat;
+            color:red;
+            font-size: 40px;
+            text-align: center;
+        }pre{
+            color:blue;
+            font-size: 16px;
+            font-weight: bold;
+        }h1{
+            background-color: wheat;
+        }#myh1{
+            color:black;
+            
+        }h2{
+          color:darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myhead">FUNCTION</h1>
+    <ol>
+    <h1><li>Function with Zero Parameter</li></h1>
+    <pre>
+      function callMe(){
+        console.log("Hello");
+        console.log("how are you?");
+    }
+   callMe();
+</pre>
+<h2> Hello <br> how are you?</h2>
+<h1><li>Sum of 2 number using Function</li></h1>
+<pre>
+  function add(a,b){
+    return a+b;
+  }
+  console.log( "Sum="+add(10,20));
+</pre>
+<h2> Sum=30</h2>
+<h1><li>
+    Arrow Function</li></h1>
+<pre>
+const test=(c,d)=>{
+  console.log(c,d);
+}
+ test(2,6); 
+</pre>
+<h2>
+2 6
+</h2>
+<h1><li>
+    Find Output</li></h1>
+<pre>
+  var x = 21;
+  var girl = function () {
+      console.log(x);
+      var x = 20;
+  };
+  girl ();
+      
+</pre> 
+<h2>Undefined</h2>
+<h1 id="myh1"><li>
+    Find Output</li></h1>
+<pre>
+  var x = 21;
+  girl ();
+  console.log(x)
+  function girl() {
+      console.log(x);
+      var x = 20;
+  };
+         
+</pre>
+<h2>Undefine 21</h2>
+<h1 id="myh1"><li>
+    Find Output</li></h1>
+<pre>
+  var x = 21;
+  a();
+  b();
+  console.log(a);
+   a = function() {
+      
+     x = 20;
+    console.log(x);
+  };
+   b = function() {
+      
+      x = 40;
+     console.log(x);
+  };
+</pre>
+<h2>'a' is not defined</h2>
+<h1 id="myh1"><li>
+    Factorial using Function</li></h1>
+   <pre>
+    function factorial(n){
+      let f=1;
+       for(let i=n;i>=1;i--){
+            f=f*i;
+       }
+       console.log("factorial of "+n+" is"+f);
+      }
+      factorial(5);
+   </pre>
+   <h2> Factorial of 5 is 120</h2>
+
+</ol>
+</body>
+</html>
