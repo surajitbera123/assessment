@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myhead{
+            background-color: wheat;
+            color:red;
+            font-size: 40px;
+            text-align: center;
+        }pre{
+            color:blue;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }h1{
+            background-color: wheat;
+        }#myh1{
+            color:black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myhead">STRINGS</h1>
+    <ol>
+    <h1><li>
+      Count Characters</li></h1>
+    <pre>
+      const countCharacters = (S) => 
+      {
+           var i=0;
+           var a_count=0, d_count=0;
+           var B=[];
+          while(S[i]!==undefined){
+           if(S[i]=='A'){
+             a_count++;
+           }
+           else if(S[i]=='D'){
+            d_count++;
+          }
+          i++;
+        }
+        B=[a_count,d_count];
+        return B;
+        
+      };
+        
+</pre>
+<h1><li>
+Count the Heads</li></h1>
+<pre>
+  var Count_Occ = (s) => 
+  {
+    let sot = sortString(s);
+    
+    let emt=" ";
+    
+    for(let i=0;i<<span>sot.length-1;)
+       
+    {
+      let  count=1,temp;
+      
+      
+          
+      for(j=i+1;j<<span>sot.length;j++){
+        
+        
+        if(sot[i]==sot[j]){
+          count++;
+          
+        }
+        else{
+          temp=j;
+          break;
+        }
+        
+      }
+      if(count>1){
+        emt=emt+sot[i]+count;
+      }
+      i=temp;
+     
+      }
+      
+    return emt;
+       
+    
+  };
+  
+  
+  
+  function sortString(s) {
+      return s.split('').sort().join('');
+  };
+   
+     
+    
+
+</pre>
+<h1><li>
+    Count the Vowels</li></h1>
+<pre>
+  var Count_Vowels= (S) => 
+  {
+    var count=0,i=0;
+        while(S[i]!==undefined){
+          switch(S[i]){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            count++;
+          }
+          i++;
+        }
+      return count;
+  };
+   
+     
+</pre>
+<h1><li>
+  Concatenate the Strings</li></h1>
+<pre>
+
+  var Concatenate_Strings = (S1, S2) => 
+{
+    return (S1.concat(S2));
+};
+
+</pre> 
+
+</pre>
+<h1 id="myh1"><li>
+    Find Length</li></h1>
+<pre>
+  const findLength = (S) => 
+  {
+      var i=0;
+      var count=0;
+      while(S[i]!=undefined){
+        i++;
+        count++;
+      }
+      return count;
+  };
+   
+                
+</pre>
+<h1 id="myh1"><li>
+ Find the Winner</li></h1>
+<pre>
+  var Game_Winner = (S) => 
+  {
+   var a_count=0, d_count=0;
+   var i=0;
+   while(S[i]!==undefined){
+      if(S[i]=='A'){
+        a_count++;
+      }else if(S[i]=='D'){
+        d_count++;
+      }
+      i++;
+   }
+   if(a_count>d_count){
+     return "Aditya";
+   }else if(d_count>a_count){
+     return "Danish";
+   }else{
+     return "Draw";
+   }
+  }
+   
+    
+    
+</pre>
+<h1 id="myh1"><li>
+    Join String</li></h1>
+<pre>
+const joinStrings = (S, P) => 
+{
+   
+   return (S.concat(P));
+   
+};
+   </pre>
+   <h1 id="myh1"><li>
+    Plaindrome Check</li></h1>
+   <pre>
+    var Palin_Check = (str) =>
+    {
+       var len=str.length;
+       for(let i=0; i<<span>len/2; i++){
+         if(str[i]!=str[len-1-i]){
+           return "False";
+         }else{
+           return "True";
+         }
+       }
+    };        
+   </pre>
+   <h1 id="myh1"><li>
+    Reverse the String</li></h1>
+   <pre>
+    var Reverse_String = (str) => 
+{
+     var i=0;
+    var count=0;
+    while(str[i]!==undefined){
+      i++;
+      count++;
+    }
+    let newString="";
+   for(var j=count-1;j>=0;j--){
+    newString+=str[j];
+   }
+   return newString;
+};
+            
+   </pre>
+   <h1 id="myh1"><li>
+    Match the String</li></h1>
+   <pre>
+var String_Match = (S1,S2) => 
+{
+     var flag=0,j=0,i=0;
+      while(S1[i]!==undefined){
+        if(S1[i]!=S2[j]){
+          flag=1;
+        }
+        i++;
+        j++;
+      }
+      if(flag==1)
+      return "NO";
+      else
+      return "YES";
+};
+   </pre>
+   <h1 id="myh1"><li>
+    String Replace</li></h1>
+   <pre>
+    var Replace = (S, pattern , text) => 
+    {
+         return (S.replace(pattern,text));
+       
+    };    
+   </pre>
+<h1 id="myh1"><li>
+    Split the String</li></h1>
+   <pre>
+var Split_the_string = (S) => 
+{
+  return (S.split());
+        
+};
+  
+</pre>
+<h1 id="myh1"><li>
+  Count the Vowels and Consonants</li></h1>
+ <pre>
+var Count_Vowels= (S) => 
+  {
+        var i=0,vowel=0;
+        while(S[i]!==undefined){
+          if(S[i]=='a'||S[i]=='e'||S[i]=='i'||S[i]=='o'||S[i]=='u'){
+            vowel++;
+          }
+          i++;
+        }
+        return vowel;
+  };
+  var Count_Consonants= (S) => 
+  {
+   var j=0,consonent=0,v=0;
+        while(S[j]!==undefined){
+          if(S[j]=='a'||S[j]=='e'||S[j]=='i'||S[j]=='o'||S[j]=='u')
+          {
+           v++;
+          }
+          else{
+           consonent++; 
+          }
+          j++;
+        }
+        return consonent;      
+  };
+   
+</pre>
+</ol>
+</body>
+</html>

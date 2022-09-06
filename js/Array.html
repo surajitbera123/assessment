@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myhead{
+            background-color: wheat;
+            color:red;
+            font-size: 40px;
+            text-align: center;
+        }pre{
+            color:blue;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }h1{
+            background-color: wheat;
+        }#myh1{
+            color:black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myhead">ARRAYS</h1>
+    <ol>
+    <h1><li>
+        Find the Product</li></h1>
+    <pre>
+        const Find_Prod = (array, N) => 
+        {
+         var mul=1;
+           for(let i=0;i<<span>N;i++){
+              mul=(mul*array[i]);
+           }  
+          return mul;   
+        
+        };        
+</pre>
+<h1><li>
+    Find the Sum</li></h1>
+<pre>
+    const Find_Sum = (array, N) => 
+    {
+      var sum=0;
+      for( var i=0;i<<span></span>N;i++){
+        sum+=array[i];
+      }
+      return sum;
+    };
+     
+    
+
+</pre>
+<h1><li>
+    Count Occurrences</li></h1>
+<pre>
+
+    const findCount = (N, K, Arr) => 
+    {
+      var c=0;
+        for(let i=0;i<<span>N;i++){
+         if(Arr[i]==K){
+            c++;
+          }
+        }
+        return c;
+    };
+     
+</pre>
+<h1><li>
+    Even Odd</li></h1>
+<pre>
+
+   
+const findEvenOdd = (N, Arr) => 
+{
+  var even=0, odd=0;
+  for(let i=0; i<<span></span>N; i++){
+     if(Arr[i]%2===0){
+       even+=Arr[i];
+     }else{
+       odd+=Arr[i];
+     }
+  }
+   var B=[even,odd];
+   return (B);
+   
+};
+ 
+</pre> 
+
+</pre>
+<h1 id="myh1"><li>
+    Find whether the number is present or not</li></h1>
+<pre>
+    const Find_Num = (array,N,M) => 
+    {
+      var flag=0;
+       for(let i=0;i<<span></span>N;i++){
+         if(M==array[i]){
+           flag=1;
+           break;
+         }
+       }
+        if(flag==1)
+          return "YES";
+         else
+         return "NO";
+    
+    };    
+                
+</pre>
+<h1 id="myh1"><li>
+ Higher Age</li></h1>
+<pre>
+    const highAge = (N, Arr) => 
+    {
+     let B=[];
+      let totalarr=0;
+        for(let i=0;i<<span>N;i++)
+        {
+          if(Arr[i]>=18){
+            B.push(Arr[i]);
+          }
+        }
+        return B;
+    };
+    
+    
+</pre>
+<h1 id="myh1"><li>
+    Increment the Array Elements</li></h1>
+   <pre>
+const Inc_Arr = (array,N) => 
+{
+  for(let i=0; i<<span>N; i++){
+    let r=array[i]+1;
+    console.log(" "+r);
+  }
+
+};
+ 
+   </pre>
+   <h1 id="myh1"><li>
+    Pass or Fail</li></h1>
+   <pre>
+const isAllPass = (N, Arr) => 
+{
+  var flag=0;
+    for(let i=0; i<<span>N; i++){
+      if(Arr[i]<<span>32){
+       flag=1;
+      }
+    }
+    if (flag==1)
+    return "NO";
+    else
+    return "YES";
+};
+ 
+        
+   </pre>
+   <h1 id="myh1"><li>
+    Unique Color Shirt</li></h1>
+   <pre>
+    function Unique_Shirts (arr,N) {
+
+        let count=0;
+      
+        for (let i = 0; i < arr.length-1;i++)
+        
+        {
+          
+          let repeat=false;
+          for(let j=i+1;j<<span>arr.length;j++){
+            
+             if (arr[i]==arr[j])
+            {
+              arr[j]= 0;
+              repeat =true;
+            }
+            
+            
+          }
+          
+          if(repeat){
+            arr[i]=0;
+          }
+          
+          
+        }
+        
+      for(let k=0;k<<span>arr.length;k++){
+        if(arr[k]>0)
+        count=count+1;
+      
+        
+      }
+      return count;
+      
+      }
+            
+   </pre>
+   <h1 id="myh1"><li>
+    Min and Max</li></h1>
+   <pre>
+    function arrayMin(arr) {
+        var minimum=arr[0];
+        var N=arr.length;
+       for(var i=1;i<<span>N;i++) { 
+          if(arr[i]<<span>minimum){
+            minimum=arr[i];
+           }
+         }
+         return minimum;
+       }
+       
+       function arrayMax(arr) {
+       var maximum=arr[0];
+       var N=arr.length;
+       for(var j=1;j<<span>N;j++){
+          if(arr[j]>maximum){
+            maximum=arr[j];
+         }
+       }
+       return maximum;
+       }
+       
+       
+   </pre>
+   <h1 id="myh1"><li>
+    Birthday Game</li></h1>
+   <pre>
+    function Birthday_Game(arr,D ,M) {
+ 
+        let counter = 0;
+         for(let i = 0; i < arr.length - 1; i++){
+              let subArray = arr.slice(i, i+M);
+              if (subArray.length === M) {
+                 let sum = subArray.reduce((a,b) => a + b, 0);
+                 if(sum === D){
+                      counter += 1;
+                  }
+               }
+         }
+         return counter;
+    }
+    
+   </pre>
+
+</ol>
+</body>
+</html>
