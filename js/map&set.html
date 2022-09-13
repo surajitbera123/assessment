@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map & Set</title>
+    <style>
+        .myhead{
+            background-color: wheat;
+            color:red;
+            font-size: 40px;
+            text-align: center;
+        }pre{
+            color:blue;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }h1{
+            background-color: wheat;
+        }#myh1{
+            color:black;
+            
+        }i{
+          text-align: right;
+          color:darkgreen;
+          position:relative;
+          left:80%;
+          font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myhead">MAP & SET</h1>
+    <ol>
+    <h1><li>
+      Problem 1: Removing the Duplicate Occurance of a given String</li></h1>
+    <pre>
+      
+        function removeDuplicate( str , n){
+   
+            var s = new Set();   
+            for (var i = 0;i<span></span>n;i++)
+                s.add(str[i]);
+     
+            for (const v of s) {
+                console.log(v);
+            }
+        }
+            var str = "abcadeecfb";
+            var n = str.length;
+     
+            removeDuplicate(str, n);
+
+    <i>Output: abcdef</i>    
+</pre>
+<h1><li>
+Problem 2: Frequency calculation of a given String</li></h1>
+<pre>
+  function countChrOccurence (str) {
+    let charMap = new Map();
+    const count = 0;
+     for (const key of str) {
+      charMap.set(key,count); 
+     }
+   
+     for (const key of str) {
+       let count = charMap.get(key);
+       charMap.set(key, count + 1);
+     }
+   
+   
+     for (const [key,value] of charMap) {
+       console.log(key+"="+value);
+     }
+
+   } 
+   countChrOccurence ("abcadeecfb") ; 
+   <i><u>Output:</u><br>a=2<br>b=2<br>c=2<br>d=1<br>e=2<br>f=1</i>
+</pre>
+</ol>
+</body>
+</html>
