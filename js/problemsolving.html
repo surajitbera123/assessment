@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <style>
+        .myhead{
+            background-color: wheat;
+            color:red;
+            font-size: 40px;
+            text-align: center;
+        }pre{
+            color:blue;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }h1{
+            background-color: wheat;
+        }#myh1{
+            color:black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myhead">Problem Solving</h1>
+    <ol>
+    <h1><li>
+        Find the Smaller Angle</li></h1>
+    <pre>
+      
+var Minimal_Angle = (h, m) => 
+{
+   let dpm=360/60;
+   let dph=360/12;
+   let a=h*dph+m*0.5;
+   let b=m*dpm;
+   let angle=Math.abs(a-b);
+   return Math.min(angle,360-angle)
+};
+ 
+
+</pre>
+<h1><li>
+ 
+Check whether the year is Leap year or not</li></h1>
+<pre>
+  
+var Check_Leap = (year) => 
+{
+ 
+  if ( year%400 == 0)      
+      return "Leap Year";  
+        
+    else if ( year%100 == 0)      
+    return " Non Leap Year";  
+         
+    else if ( year%4 == 0 )      
+     return "Leap Year";  
+    
+    else      
+     return " Non Leap Year";      
+    
+
+};
+ 
+
+</pre>
+<h1><li>
+  Check whether the Package is Dream Package or not</li></h1>
+<pre>
+  function Check(obj1) {
+    for(let key in obj1){
+    if(obj1[key]>= 500000){
+      return "Dream";
+    }
+    else {
+      return "NotDream";
+    }
+  };
+   
+     
+</pre>
+<h1><li>
+    Perfect Number Check</li></h1>
+<pre>
+  
+var Perfect_Check = (N) => 
+{
+      let sum=0;
+      let p=N;
+  for(let i=1;i<<span></span>N;i++){
+   if(N%i==0){
+      sum=sum+i;
+   }
+   
+  }
+  if(p==sum){
+   return ("YES");
+}else{
+   return ("NO");
+}
+        
+};
+ 
+
+</pre> 
+
+</pre>
+<h1 id="myh1"><li>
+    
+    Reverse the Number</li></h1>
+<pre>
+  
+var Reverse_Number = (N) => 
+{
+  let s=0,r;
+  while(N!==0){
+    r=N%10;
+    s=s*10+r;
+    N=parseInt(N/10);
+  }
+  return s;
+};
+ 
+               
+</pre>
+<h1 id="myh1"><li>
+    
+    Substring Check</li></h1>
+  <pre>
+   
+var Substring_Check = (S1, S2) => 
+{
+  var result = S1.indexOf(S2);
+    if(result == -1) {
+      return "NO";
+    }
+    else {
+     return "YES";
+    }
+};
+   
+</pre>
+</ol>
+</body>
+</html>

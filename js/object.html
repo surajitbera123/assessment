@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <style>
+        .myhead{
+            background-color: wheat;
+            color:red;
+            font-size: 40px;
+            text-align: center;
+        }pre{
+            color:blue;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }h1{
+            background-color: wheat;
+        }#myh1{
+            color:black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myhead">OBJECTS</h1>
+    <ol>
+    <h1><li>
+      Create a Function</li></h1>
+    <pre>
+      function Check(obj1){
+        obj1.setter = function (name) {
+            console.log(obj1.name)
+          }
+        
+      }
+        
+</pre>
+<h1><li>
+  Delete a Property</li></h1>
+<pre>
+  
+  function Check(obj1) {
+    obj1={
+      name:"Utkarsh",
+      rollno:129
+    };
+    return (delete obj1.rollno);
+}
+</pre>
+<h1><li>
+  Check whether the Package is Dream Package or not</li></h1>
+<pre>
+  function Check(obj1) {
+    for(let key in obj1){
+    if(obj1[key]>= 500000){
+      return "Dream";
+    }
+    else {
+      return "NotDream";
+    }
+  };
+   
+     
+</pre>
+<h1><li>
+  Check whether the Object has a parameter or not</li></h1>
+<pre>
+  function Check(obj1) {
+    if (Object.values(obj1).indexOf('1') > -1) {
+        return "true" ;
+  }
+  else {
+    return "false";
+  }
+  }
+</pre> 
+
+</pre>
+<h1 id="myh1"><li>
+    
+Merge the Objects</li></h1>
+<pre>
+  
+function Check(obj1,obj2) {
+  let obj3 = Object.assign(obj1,obj2)
+  return obj3;
+}
+                   
+</pre>
+<h1 id="myh1"><li>
+    
+ Object Multiplyer</li></h1>
+  <pre>
+    function Check(a,obj1) {
+      obj1.id=obj1.id*a;
+      obj1.houseno=obj1.houseno*a;
+      return obj1;
+      }
+                     
+  </pre>
+  <h1 id="myh1"><li>
+    
+    Find the Sum of Data Members</li></h1>
+    <pre>
+    
+function Check(obj1) {
+  let sum = 0;
+for (let value of Object.values(obj1)) {
+ sum += value;
+}
+return(sum);
+}               
+    </pre>
+    <h1 id="myh1"><li>
+    
+      Check whether the Objects are same or not</li></h1>
+      <pre>
+        function check(obj1,a,b) {
+  
+          if(obj1.name===a && obj1.id===b) {
+            return "true";
+          }
+          else {
+            return "false";
+          }
+        }
+                  
+      </pre>
+</ol>
+</body>
+</html>
