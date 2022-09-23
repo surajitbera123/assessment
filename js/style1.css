@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    flex-flow: row ;
+    justify-content: flex-start;
+  
+  
+
+}
+.item
+{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 5px;
+
+}
+button{
+    font-size: 20px;
+    background-color:yellow;
+    color:black;
+    border-radius: 10px;
+    padding: 4px;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 2px 3px gray;
+    border:0px;
+
+}
+#HH{
+    background-color: yellow;
+    color: black;
+    font-size: 35px;
+    border-radius: 10px;
+}
+#SS{
+    background-color: yellow;
+    color: black;
+    font-size: 35px;
+    border-radius: 10px;
+}
+#MM{
+    background-color: yellow;
+    color: black;
+    font-size: 35px;
+    border-radius: 10px;
+}
+#screen{color: red;}
+
+h1{color: rgb(255, 0, 21);}
