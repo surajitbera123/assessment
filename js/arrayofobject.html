@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Object</title>
+    <style>
+    
+        p{
+            text-align: right;
+        }h1{
+            text-align: center;
+            background-color: wheat;
+            color:red;
+            font-size: 36px;
+        }
+        li{
+            background-color: wheat;
+            font-size: 20px;
+        }
+        pre{
+            color:blue;
+            font-size: 17px;
+        }
+        pre p{
+            color:fuchsia;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array of Objects</h1>
+    <ol>
+        <li>"let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+            {name: 'Baba', id: 101, marks : 23 },
+            {name: 'yaga', id: 200, marks : 45 },
+            {name: 'Wick', id: 115, marks : 75 } ] "<br>
+            "Question 1 : We are interested in retrieving only the name of the students and all the names should be in caps.
+        </li>
+        <pre>
+        let studentRecords = [ 
+        {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } ] ;
+        for(var i=0; i<<span>studentRecords.length; i++){ 
+            document.write(studentRecords[i].name.toLocaleUpperCase()+", ");
+        }
+        <p>JOHN, BABA, YAGA, WICK</p>
+    </pre> 
+    <li>
+        "Question 2: Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+
+    </li>  
+    <pre>
+        let studentRecords = [ 
+        {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } ] ;
+        for(var i=0; i<<span>studentRecords.length; i++){
+          if(studentRecords[i].marks>50){
+              document.write("Name: "+studentRecords[i].name+"&nbsp&nbsp&nbsp"+"id: "+studentRecords[i].id+"&nbsp&nbsp&nbsp"+"Marks: "+studentRecords[i].marks+"<<span>br>");
+          }
+        }  
+        <p>Name: John   id: 123   Marks: 98
+           Name: Wick   id: 115   Marks: 75</p>
+    </pre> 
+    <li>
+        "Question 3: Retrieve the details of students who scored more than 50 marks and have id greater than 120.
+
+    </li>  
+    <pre>
+        let studentRecords = [ 
+          {name: 'John', id: 123, marks : 98 },
+          {name: 'Baba', id: 101, marks : 23 },
+          {name: 'yaga', id: 200, marks : 45 },
+          {name: 'Wick', id: 115, marks : 75 } ] ;
+          for(var i=0; i<<span>studentRecords.length; i++){
+            if((studentRecords[i].marks>50) && (studentRecords[i].id>120)){
+                document.write("Name: "+studentRecords[i].name+"&nbsp&nbsp&nbsp&nbsp"+"id: "+studentRecords[i].id+"<<span>br>");
+            }
+          }
+        <p>Name: John   id: 123</p>
+    </pre> 
+    <li>
+        Question 4: Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.
+
+    </li>  
+    <pre>
+        let studentRecords = [ 
+        {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } ] ;
+        let sum=0;
+        for(var i=0; i<<span>studentRecords.length; i++){
+          sum=sum+studentRecords[i].marks;
+        }
+        document.write("Sum of all Students' marks is: "+sum);
+        <p>Sum of all Students' marks is: 241</p>
+    </pre> 
+    <li>
+        Question 5: This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.
+
+    </li>  
+    <pre>
+        let studentRecords = [ 
+        {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } ] ;
+        for(var i=0; i<<span>studentRecords.length; i++){
+          if(studentRecords[i].marks>50){
+              document.write("Name: "+studentRecords[i].name+"<<span>br>");
+          }
+        }
+        <p>Name: John
+           Name: Wick</p>
+    </pre> 
+    <li> Question 6: This time we are required to print the sum of marks of the students with id > 120.
+    </li>  
+    <pre>
+        let studentRecords = [ 
+        {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } ] ;
+        let add=0;
+        for(var i=0; i<<span>studentRecords.length; i++){
+          if(studentRecords[i].id>120){
+              add+=studentRecords[i].marks;
+          }
+        }
+        document.write("the total marks of those whose id is >120 is: "+add);
+        <p>the total marks of those whose id is >120 is: 143</p>
+    </pre> 
+   
+    <li> Question 7: This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.
+    </li>  
+    <pre>
+        let studentRecords = [ 
+        {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } ] ;
+        let add=0;
+        document.write("whose marks are <<span>50 is added more 15 marks as grace and now updated graces are: "+"<<span>br>");
+        for(var i=0; i<<span>studentRecords.length; i++){
+          if(studentRecords[i].marks>50){
+              add+=studentRecords[i].marks;
+          }else{
+            var grace=studentRecords[i].marks+15;
+            document.write("marks: "+grace+"<<span>br>")
+          }
+        }
+        document.write("the total marks of those whose marks are >50 is: "+add+"<<span>br>");
+    </script></h2>
+        <p>whose marks are <<span>50 is added more 15 marks as grace and now updated graces are:
+            marks: 38
+            marks: 60
+            the total marks of those whose marks are >50 is: 173</p>
+    </pre> 
+   <li>
+    Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. 
+   </li>
+    <pre>
+        let studentDetails=[ 
+        {name: 'Jhony', class: 'BBA', roll_no: 21},
+        {name: 'Anjani', class: 'B.Tech', roll_no: 27 },
+        {name: 'Aparup', class: 'BCA', roll_no : 45 },
+        {name: 'Wasim', class: 'B.Sc', roll_no: 75 },
+        {name: 'Akram', class: 'MCA', roll_no: 323 }, 
+        {name: 'Rupak', class: 'M.Tech', roll_no: 123 },] ;
+       for( var i=0; i<<span>studentDetails.length; i++){
+        document.write("NAME: "+studentDetails[i].name+"&nbsp&nbsp&nbsp&nbsp"+"CLASS: "+studentDetails[i].class+"&nbsp&nbsp&nbsp&nbsp"+"ROLL_NO: "+studentDetails[i].roll_no+"<<span>br>")
+       }
+       <p>NAME: Jhony    CLASS: BBA    ROLL_NO: 21
+        NAME: Anjani    CLASS: B.Tech    ROLL_NO: 27
+        NAME: Aparup    CLASS: BCA    ROLL_NO: 45
+        NAME: Wasim    CLASS: B.Sc    ROLL_NO: 75
+        NAME: Akram    CLASS: MCA    ROLL_NO: 323
+        NAME: Rupak    CLASS: M.Tech    ROLL_NO: 123</p>
+    </pre> 
+   
+    </ol>
+</body>
+</html>
