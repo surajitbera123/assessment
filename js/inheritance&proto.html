@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li{
+            background-color: wheat;
+            font-size: 25px;
+
+        }h1{
+            background-color: wheat;
+            font-size: 40px;
+             color: red;
+             text-align: center;
+        }p{
+            color:green;
+            font-weight: bold;
+            font-size: 26px;
+            text-align: right;
+            margin-right: 30px;
+        }
+        pre{
+            font-size: 17px;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inheritance & Prototype</h1>
+    <ol>
+        <li>
+            Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype
+        </li>
+        <pre>
+            class Parent {
+                func1() {
+                    console.log("inside func1() of class parent");
+                }
+    
+                func2() {
+                    consol.log("inside func2() of class parent");
+                }
+            }
+    
+            class Child extends Parent {
+                func3() {
+                    console.log("inside func3() of class Child");
+                }
+            }
+    
+           
+            let p1 = new Parent();
+            let c1 = new Child();
+            p1.func1();
+            c1.func1();
+        </pre>
+        <p>inside func1() of class parent</p>
+        <li>Write code to explain prototype chaining</li>
+        <pre>
+            function Person() {
+                this.name = 'Abhik'
+            }
+            
+            // adding property 
+            Person.prototype.name = 'Anis';
+            Person.prototype.age = 23
+            
+            const person1 = new Person();
+            
+            console.log(person1.name); 
+            console.log(person1.age); 
+        </pre>
+        <p>Abhik<br>
+           23</p>
+<li>
+            Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays
+           </li>
+           <pre>
+const array1 = [10, 22, 13, 34];
+const add= 0;
+const sum = array1.reduce(
+(previousValue, currentValue) => previousValue + currentValue,add);
+   console.log(sum);
+           </pre>
+           <p>79</p>
+<li>Write a JavaScript function to retrieve all the names of object's own and inherited properties.</li>
+<pre> function allKeys(obj) {
+    if (!isObject(obj)) return [];
+    var keys = [];
+    for (var key in obj) keys.push(key);
+    return keys;
+}
+function isObject(obj) 
+{
+    var type = typeof obj;
+    return type === 'function' || type === 'object' && !!obj;
+  }
+function Student(name) {
+  this.name = name;
+}
+Student.prototype.rollno = true;
+console.log(allKeys(new Student("Sara")));</pre> 
+<p>name<br>
+    rollno<br>
+    2
+</p>  
+
+</ol>
+    
+</body>
+</html>
