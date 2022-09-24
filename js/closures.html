@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+            color:green;
+            margin-right: 30px;
+        }h1{
+            font-size: 40px;
+            background-color: wheat;
+            color:red;
+            text-align: center;
+        }li{
+        color:blue;
+        font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Closures</h1>
+    <ol>
+        <li>
+            <pre>
+    function counter(){
+    var counter = 0;
+            
+    function IncreaseCounter() {
+          return counter += 1;
+        };
+            
+    return IncreaseCounter;
+    }
+            
+    var counter = Counter();
+    alert(counter());
+    alert(counter());
+    alert(counter());
+    alert(counter());
+        </pre>
+        <p>This page Says: 1 2 3 4</p><hr>
+        </li>
+        <li>
+            <pre>
+    let count = 0;
+    (function () {
+    if (count === 0) {
+     let count = 1;
+     console.log(count); // What is logged?
+     }
+     console.log(count); // What is logged?
+    })();
+              <p>1 0</p><hr>
+            </pre>
+        </li>
+
+        <li>
+            <pre>
+    for (var i = 0; i < 3; i++) {
+    setTimeout(function log() {
+    console.log(i); // What is logged?
+    }, 1000);
+    }
+    </pre>
+            <p>3</p><hr>
+        </li>
+
+        <li>  
+                Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.
+        </li>
+        <pre style="color:red;font-size:18px">
+            function outer(length){
+                function inner(breadth){
+                    var area=(length*breadth);
+                  document.write("Area of Rectangle is: "+area);
+                }
+                return inner;
+            }
+            var fun=outer(3);
+            fun(4);
+        </pre>
+        <p>Area of Rectangle is: 12</p><hr>
+
+        <li>
+            Take a variable in outer function and create an inner function to increase the counter every time it is called 
+        </li>
+        <pre style="color:red;font-size:18px">
+            function outer(){
+                var counter=0;
+                function inner(){
+                  return counter++;
+                }
+                return inner;
+            }
+            var count=outer();
+            document.write("First Line: "+count()+"<<span>br>");
+            document.write("Second Line: "+count()+"<<span>br>");
+            document.write("Third Line: "+count()+"<<span>br>");
+            document.write("Fourth Line: "+count()+"<<span>br>");
+        </pre>
+        <p>First Line: 0<br>
+            Second Line: 1<br>
+            Third Line: 2<br>
+            Fourth Line: 3</p><hr>
+<li>
+<pre>
+var a = 12;
+(function () {
+  alert(a);
+})();"</pre>
+</li>
+<p>This page says 12</p><hr>
+<li>
+<pre>
+var a = 10;
+var x = (function () {
+  var a = 12;
+  return function () {
+    alert(a);
+};
+})();
+x();
+</pre>
+</li>
+<p>This page says 12</p><hr>
+<li><pre>
+    var globalVar = "xyz";
+
+    (function outerFunc(outerArg) {
+        var outerVar = 'a';
+        
+        (function innerFunc(innerArg) {
+        var innerVar = 'b';
+        
+        console.log(
+            "outerArg = "+ outerArg + "\n" +
+            "innerArg = " + innerArg + "\n" +
+            "outerVar = " + outerVar + "\n" +
+            "innerVar = " + innerVar + "\n" +
+            "globalVar = " + globalVar);
+        
+        })(456);
+    })(123); 
+</pre> 
+</li>
+<p>outerArg = 123<br>
+    innerArg = 456<br>
+    outerVar = a<br>
+    innerVar = b<br>
+    globalVar = xyz</p>
+</ol>
+</body>
+</html>
