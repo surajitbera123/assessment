@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: wheat;
+            font-size: 25px;
+
+        }h1{
+            background-color: wheat;
+            font-size: 38px;
+            text-align: center;
+            color:red
+   
+        }
+        pre{
+            font-size: 19px;
+            color:blue;
+        }p{
+            text-align: right;
+            font-size: 27px;
+            color:green;
+            font-weight: bolder;
+            margin-right:30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Promise & Async & Await</h1>
+    <ol>
+        <li>Write one example explaining how you can write a callback function ?</li>
+    <pre>
+        
+        function greet(callback, nam){
+            callback(nam);
+           }
+           //Callback Function
+           function student(nam){
+              document.write(`Student's name is ${nam}`);
+           }
+           greet(student,"Rahul");
+
+           <p>Student's name is Rahul</p>
+           
+    </pre>
+    <li>Write callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
+
+        Explain callback hell.
+        Numbers
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+    </li>
+    <pre>
+        setTimeout(()=>{
+            console.log("1")
+             
+             setTimeout(()=>{
+                console.log("2")
+             
+              setTimeout(()=>{
+                 console.log("3")
+             
+                     setTimeout(()=>{
+                        console.log("4")
+             
+                      setTimeout(()=>{
+                        console.log("5")
+             
+                          setTimeout(()=>{
+                           console.log("6")
+             
+                                setTimeout(()=>{
+                              console.log("7")
+                                               },7000)
+                                         },6000)
+                                      },5000)
+                              },4000)
+                      },3000)
+             },2000)
+         },1000)
+
+        <p> 1
+            2
+            3
+            4
+            5
+            6
+            7
+        </p>
+         
+        </pre>
+        <li>"Write promise function to print numbers from 1 to 7, in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
+
+            Numbers
+            1
+            2
+            3
+            4
+            5
+            6
+            7"</li>
+        <pre>
+            const taskOne=()=>{
+                return new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                    resolve("1");
+                },1000);
+               });
+            }
+        
+           const taskTwo=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("2")
+            },2000);
+           });
+        }
+        const taskThree=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("3")
+            },3000);
+           });
+        }
+        const taskFour=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("4")
+            },4000);
+           });
+        }
+        const taskFive=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("5")
+            },5000);
+           });
+        }
+        const taskSix=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("6")
+            },6000);
+           });
+        }
+        const taskSeven=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("7")
+            },7000);
+           });
+        }
+         taskOne()
+           .then((res)=> console.log(res));
+           taskTwo()
+           .then((res)=> console.log(res));
+           taskThree()
+           .then((res)=> console.log(res));
+           taskFour()
+           .then((res)=> console.log(res));
+           taskFive()
+           .then((res)=> console.log(res));
+           taskSix()
+           .then((res)=> console.log(res));
+           taskSeven()
+           .then((res)=> console.log(res));
+           <p>1
+            2
+            3
+            4
+            5
+            6
+            7
+           </p>
+        </pre>
+        <li>Create a promise function accepting a argument, if yes is passed to the function then it should go to resolved state and print Promise Resolved, and if nothing is passed then it should go to reject state and catch the error and print Promise Rejected </li>
+   <pre>
+    let x=5,y=5;
+    let prom=new Promise(function(resolve,reject){
+      if(x==y){
+        resolve("Resolved");
+      }else{
+        reject("failed");
+      }
+    });
+
+    prom.then(function(fromResolve){
+        document.write("Promise is " +fromResolve);
+    })
+
+    .catch(function(fromReject){
+        document.write("Promise is "+fromReject);
+    })
+    <p>Promise is Resolved</p>
+   </pre>
+   <li>Create examples to explain callback function</li>
+
+   <pre>  
+    function greet(callback, nam){
+        callback(nam);
+       }
+       //Callback Function
+       function student(nam){
+          document.write(`Student's name is ${nam}`);
+       }
+       greet(student,"PAPIYA");
+
+       <p>Student's name is PAPIYA</p></pre>
+
+       <li>Create examples to explain callback hell function</li>
+       <pre>const animateAll = (animate) => {
+        setTimeout(() => {
+            animate(words[0]);
+            setTimeout(() => {
+                animate(words[1]);
+                setTimeout(() => {
+                    animate(words[2]);
+                }, 1000)
+            }, 1000)
+        }, 1000)
+    }
+  </pre>
+  <li>Create examples to explain promises function</li>
+  <pre> const count = true;
+
+    let countValue = new Promise(function (resolve, reject) {
+        if (count) {
+            resolve("There is a count value.");
+        } else {
+            reject("There is no count value");
+        }
+    });
+    
+    console.log(countValue);</pre>
+
+    <li>Create examples to explain async await function</li>
+
+    <pre> const taskOne=()=>{
+        return new Promise((resolve,reject)=>{
+         resolve ("task 1 is completed");
+        });
+    }
+    const taskTwo=()=>{
+     return new Promise((resolve,reject)=>{
+      resolve ("task 2 is completed");
+     });
+ }
+ const taskThree=()=>{
+     return new Promise((resolve,reject)=>{
+      resolve ("task 3 is completed");
+     });
+ }
+ //Async & Await
+
+ async function callAllTask(){
+     const t1=await taskOne();
+     console.log(t1);
+     const t2=await taskTwo();
+     console.log(t2);
+     const t3=await taskThree();
+     console.log(t3);
+ }
+ callAllTask();
+
+ <p>task 1 is completed
+    task 2 is completed
+    task 3 is completed</p>
+</pre>
+
+<li>Create examples to explain promise.all function</li>
+
+<pre>  p1 = Promise.resolve(50);
+    p2 = 200
+    p3 = new Promise(function(resolve, reject) {
+        setTimeout(resolve, 100, 'Surajit');
+    });
+ 
+    Promise.all([p1, p2, p3]).then(function(values) {
+        document.write(values);
+    });</pre>
+
+    <p>50,200,Surajit</p>
+    </ol>
+</body>
+</html>
