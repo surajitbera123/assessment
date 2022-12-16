@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .gridContainer{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 100px,50px;
+        grid-column-gap:15px;
+        grid-row-gap:15px;
+       }
+       .gridContainer>div{
+        background-color: rgb(228, 179, 89);
+        border:0px;
+        text-align: center;
+        padding:5px;
+        height:300px;
+       }
+       .item1{
+        grid-column: 1/3;
+       }
+       input{
+        padding:10px;
+        border-radius: 30px;
+        border:0px;
+        text-align: center;
+       }
+       button{
+        background-color: green;
+        border: 0px;
+        border-radius: 30px;
+        padding:10px;
+        width:50%;
+        color:white;
+        font-size: 25px;
+       }
+       .flex{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+       }
+      .flex>div{
+        background-color: blueviolet;
+        height:170px;
+        width:150px;
+        margin: 15px;
+        justify-content:flex-end;
+        align-items:center;
+      }#child{
+        color:aliceblue;
+        text-align: center;
+        font-size: 20px;
+      }li{
+        text-align: left;
+        font-weight: bold;
+      }
+      hr{
+        height:1px;
+        color:black
+      }
+      @media only screen and (max-width: 780px) {
+        
+        #flexmain{
+             display: flex;
+             flex-wrap: wrap;
+             flex-direction: column;
+        }#flexmain .item1{
+           position: relative;
+           bottom: -650px;
+        }
+      }
+    </style>
+</head>
+<body>
+ <hr>
+ <h1>My-To-Do-App</h1>
+<hr>
+ <div class="gridContainer" id="flexmain">
+    <div>
+        <h2><b>Header</b></h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Ducimus fugit autem maxime <br>accusantium quaerat, repellendus qui, <br>quod eos fuga tempore odio<br> nisi unde excepturi sapiente incidunt <br>nesciunt cumque consectetur <br> Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. Accusamus, sint!</p>
+    </div>
+    <div>
+        <h2><b>HTML List</b></h2>
+        <hr>
+        <ol start="5">
+            <li>Box-1</li>
+            <li>Box-1</li>
+            <li>Box-1</li> 
+            <br>
+            <ul>
+                <li>Box-1</li>
+                <li>Box-2</li>
+            </ul>
+        </ol>
+    </div>
+    <div class="item1">
+        <h2>Flex Item</h2>
+        <hr>
+        <div class="flex">
+            <div id="child">Child Box</div>
+            <div id="child">Child Box</div>
+            <div id="child">Child Box</div>
+        </div>
+    </div>
+    <div style="height:625px;position:relative; top:-325px">
+        <h2>Registration Form</h2>
+        <hr>
+        <input type="text" name="name" id="" placeholder="Name"><br><br>
+        <input type="text" name="name1" id="" placeholder="Address"><br><br>
+        <input type="text" name="name2" id="" placeholder="Mobile No"><br><br>
+        <input type="text" name="name3" id="" placeholder="Email-ID"><br><br>
+        <input type="text" name="name4" id="" placeholder="Optional"><br><br>
+        <button>Submit</button>
+    </div>
+    
+ </div>
+ <hr>
+</body>
+</html>
